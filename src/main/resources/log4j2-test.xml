@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+    <Properties>
+        <Property name="filename">log/info.log</Property>
+        <Property name="htmlFile">log/log.html</Property>
+
+    </Properties>
+    <Appenders>
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{HH:mm:ss} [%t] %-5level %logger{36} - %msg%n"/>
+        </Console>
+        <File name="File" fileName="${filename}" append="false">
+            <PatternLayout>
+                <Pattern>%d{HH:mm:ss} %p %C{1.} [%t] %m%n</Pattern>
+            </PatternLayout>
+        </File>
+        <File name="html" fileName="${htmlFile}" append="false">
+            <HTMLLayout />
+        </File>
+
+    </Appenders>
+    <Loggers>
+        <Root level="info">
+            <AppenderRef ref="Console"/>
+            <AppenderRef ref="File" />
+            <AppenderRef ref="html" />
+        </Root>
+    </Loggers>
+</Configuration>

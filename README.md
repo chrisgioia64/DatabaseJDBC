@@ -10,3 +10,4 @@ This is a Maven project that performs basic CRUD operations via direct JDBC call
 - Use of Lombok for addition of getters/setters, builders, and logging.
 - Unit Testing of `DAO` methods via `TestNG`. Test both sequential transactions and interleaving concurrent transactions.
 - Addition of a custom annotation `@DbFile` for specifying the location of a database properties file (e.g. containing database url, username, password)
+- Use of Apache ibatis to run a script of DML (Data Manipulation Language) queries to seed the database with dummy data.
